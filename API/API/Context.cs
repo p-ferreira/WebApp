@@ -23,6 +23,25 @@ namespace API
                 .Property(e => e.Error)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<WorkItems>()
+               .Property(e => e.Title)
+               .IsUnicode(false);
+
+            modelBuilder.Entity<WorkItems>()
+                .Property(e => e.WorkItemType)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<WorkItems>()
+                .Property(e => e.IterationPath)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<WorkItems>()
+                .Property(e => e.AreaPath)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<WorkItems>()
+                .Property(e => e.State)
+                .IsUnicode(false);
         }
     }
 }
