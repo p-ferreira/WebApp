@@ -13,6 +13,9 @@ export class WorkItemListComponent implements OnInit {
   service: WorkItemService;
   workItems : WorkItemComponent[] = []
   page : Page;
+  previousPage : Number = 1;
+  currentPage : Number = 2;
+  nextPage : Number = 3;  
   
    constructor(service: WorkItemService) 
    { 
@@ -27,13 +30,29 @@ export class WorkItemListComponent implements OnInit {
    }
 
    changePage(pageNumber : number)
-   {
+   {    
+        
+      if(pageNumber - 1 != 0)
+         this.previousPage = pageNumber - 1;
+      else
+         this.previousPage = 1;
+
+      if(pageNumber + 1 <= this.page.NumberOfPages)
+        this.nextPage = pageNumber + 1;
+      else
+        this.nextPage = this.page.NumberOfPages;
+
+      // if(this.page.PageNumber == this.page.PageNumber)
+         this.currentPage = pageNumber;
+
       this.service.getPage(pageNumber)
           .subscribe(data => {
                         this.page = data;
-                        console.log(this.page);
+                        console.log(pageNumber);
                     }, erro => console.log(erro));    
-   }
+
+
+   }   
 
 
   ngOnInit() {

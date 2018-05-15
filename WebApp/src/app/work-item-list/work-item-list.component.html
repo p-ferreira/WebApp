@@ -22,25 +22,25 @@
                             </tr>
                     </ng-container> 
                   </tbody>  
-                  <tfoot align="center">  
+                  <tfoot>  
                       <tr>  
                           <td align="center" colspan="6">  
-                              <div class="pull-right">     
+                              <div class="text-center">     
                                     <ul class="pagination">
-                                        <li class="page-item">
+                                        <li class="page-item" (click)=changePage(1)>
                                         <a class="page-link" aria-label="Previous">
                                             <span aria-hidden="true">&laquo;</span>
                                             <span class="sr-only">First</span>
                                         </a>
                                         </li>
-                                        <li class="page-item" (click)=changePage(page.PageNumber)>
-                                            <a class="page-link">{{ page.PageNumber }}</a>
+                                        <li class="page-item" (click)=changePage(previousPage)>
+                                            <a class="page-link">{{ previousPage }}</a>
                                         </li>
-                                        <li class="page-item" (click)=changePage(2)>
-                                            <a class="page-link">{{ page.PageNumber + 1 }}</a>
+                                        <li class="page-item" (click)=changePage(currentPage)>
+                                            <a class="page-link">{{ currentPage }}</a>
                                         </li>
-                                        <li class="page-item">
-                                            <a class="page-link">{{ page.PageNumber + 2}}</a>
+                                        <li class="page-item" (click)=changePage(nextPage)>
+                                            <a class="page-link">{{ nextPage }}</a>
                                         </li>
                                         <li class="page-item" (click)=changePage(page.NumberOfPages)>
                                             <a class="page-link" aria-label="Next">
