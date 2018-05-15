@@ -13,33 +13,48 @@
                       </tr>  
                   </thead>  
                   <tbody>  
-                      <tr>  
-                          <td>aa</td>  
-                          <td>bb</td>  
-                          <td>cc</td>  
-                          <td>dd</td>  
-                      </tr>  
+                    <ng-container *ngFor="let workItem of page.PageItems">
+                            <tr>
+                                <td>{{ workItem.ID }}</td>
+                                <td>{{ workItem.Title }}</td>
+                                <td>{{ workItem.WorkItemType }}</td>
+                                <td>{{ workItem.Guid }}</td>
+                            </tr>
+                    </ng-container> 
                   </tbody>  
-                  <tfoot>  
+                  <tfoot align="center">  
                       <tr>  
-                          <td align="center" colspan="6   ">  
-                              <span class="form-group pull-left page-size form-inline">  
-                                  <select id="ddlPageSize" class="form-control control-color">  
-                                      <option value="5">5</option>  
-                                      <option value="10">10</option>  
-                                      <option value="25">25</option>  
-                                      <option value="50">50</option>  
-                                  </select>  
-                              </span>  
-                              <div class="pull-right">  
+                          <td align="center" colspan="6">  
+                              <div class="pull-right">     
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                        <a class="page-link" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                            <span class="sr-only">First</span>
+                                        </a>
+                                        </li>
+                                        <li class="page-item" (click)=changePage(page.PageNumber)>
+                                            <a class="page-link">{{ page.PageNumber }}</a>
+                                        </li>
+                                        <li class="page-item" (click)=changePage(2)>
+                                            <a class="page-link">{{ page.PageNumber + 1 }}</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link">{{ page.PageNumber + 2}}</a>
+                                        </li>
+                                        <li class="page-item" (click)=changePage(page.NumberOfPages)>
+                                            <a class="page-link" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                                <span class="sr-only">Last</span>
+                                            </a>
+                                        </li>
+                                    </ul>
                               </div>  
                           </td>  
                       </tr>  
                   </tfoot>  
               </table>  
-          </div>
-          <button (click)="myEvent($event)">My Button</button>  
-          <button mat-button (click)="openDialog()">Open dialog</button>            
+          </div>        
       </div>  
   </div>  
 </div>  

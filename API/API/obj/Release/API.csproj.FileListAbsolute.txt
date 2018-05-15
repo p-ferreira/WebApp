@@ -43,3 +43,6 @@ C:\Users\Usuário\Desktop\Angular\WebApp\API\API\bin\System.Web.Http.WebHost.xml
 C:\Users\Usuário\Desktop\Angular\WebApp\API\API\obj\Release\API.csproj.CoreCompileInputs.cache
 C:\Users\Usuário\Desktop\Angular\WebApp\API\API\obj\Release\API.dll
 C:\Users\Usuário\Desktop\Angular\WebApp\API\API\obj\Release\API.pdb
+C:\Users\Usuário\Desktop\Angular\WebApp\API\API\bin\System.Web.Cors.dll
+C:\Users\Usuário\Desktop\Angular\WebApp\API\API\bin\System.Web.Http.Cors.dll
+C:\Users\Usuário\Desktop\Angular\WebApp\API\API\bin\System.Web.Http.Cors.xml

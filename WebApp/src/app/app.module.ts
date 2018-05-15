@@ -4,6 +4,7 @@ import { HttpClientModule  } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { WorkItemComponent } from './work-item/work-item.component';
 import { WorkItemListComponent } from './work-item-list/work-item-list.component';
+// import 'rxjs/add/operator/map';
 
 @NgModule({
   declarations: [

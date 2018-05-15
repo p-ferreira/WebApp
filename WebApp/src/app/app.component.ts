@@ -7,11 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'WorkItems List';
-
-   myEvent(event) {
-    console.log("Fooooi!");
-  }
-
-
-
+  
 }

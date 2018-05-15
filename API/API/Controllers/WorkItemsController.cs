@@ -5,12 +5,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace API.Controllers
 {
     public class WorkItemsController : ApiController
     {
         [HttpGet]
+        [EnableCors(origins: "http://wiapi2018.azurewebsites.net", headers: "*", methods: "*")]
         public IHttpActionResult GetPage(int pageNumber)
         {
             GenericDataBase genericDbCtx = new GenericDataBase();
