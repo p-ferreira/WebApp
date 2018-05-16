@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WorkItemComponent } from './work-item.component';
+import { NGModalComponent } from './ngmodal.component';
 
-describe('WorkItemComponent', () => {
-  let component: WorkItemComponent;
-  let fixture: ComponentFixture<WorkItemComponent>;
+describe('NGModalComponent', () => {
+  let component: NGModalComponent;
+  let fixture: ComponentFixture<NGModalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WorkItemComponent ]
+      declarations: [ NGModalComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WorkItemComponent);
+    fixture = TestBed.createComponent(NGModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

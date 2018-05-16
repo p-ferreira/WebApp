@@ -1,0 +1,17 @@
+tr.noBorder td {
+  border: 0;  
+  line-height: 25px;
+  min-height: 25px;
+  height: 25px;
+}
+
+td.totalizer-left {
+  background-color: rgb(221, 0, 49);
+  color: white;
+  
+}
+
+td.totalizer-right {
+  background-color: rgb(195, 0, 47);
+  color: white;
+}

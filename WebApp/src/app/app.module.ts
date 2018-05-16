@@ -1,21 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpClientModule  } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { WorkItemComponent } from './work-item/work-item.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule  } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { WorkItemListComponent } from './work-item-list/work-item-list.component';
-// import 'rxjs/add/operator/map';
+import { NGModalComponent } from './ngmodal/ngmodal.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    WorkItemComponent,
-    WorkItemListComponent
+    AppComponent,    
+    WorkItemListComponent, NGModalComponent
   ],
   imports: [
-    BrowserModule,
-    HttpClientModule
+    BrowserModule,  
+    BrowserAnimationsModule,  
+    HttpClientModule,
+    NgbModule.forRoot()
   ],
+  entryComponents : [NGModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

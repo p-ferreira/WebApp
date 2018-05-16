@@ -1,0 +1,42 @@
+<div class="modal-header">
+  <h4 class="modal-title">Work Item {{ workItem.uId }}</h4>
+  <button type="button" class="close" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">  
+  <table class="table table-hover">
+    <tr>
+      <th scope="row">uId</th>
+      <td>{{ workItem.uId  }}</td>
+    </tr>
+    <tr>
+      <th scope="row">ID</th>
+      <td>{{ workItem.ID }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Title</th>
+      <td>{{ workItem.Title }}</td>
+    </tr>
+    <tr>
+      <th scope="row">WorkItemType</th>
+      <td>{{ workItem.WorkItemType }}</td>
+    </tr>
+    <tr>
+      <th scope="row">IterationPath</th>
+      <td>{{ workItem.IterationPath }}</td>
+    </tr>
+    <tr>
+      <th scope="row">AreaPath</th>
+      <td>{{ workItem.AreaPath }}</td>
+    </tr>
+    <tr>
+      <th scope="row">State</th>
+      <td>{{ workItem.State }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Guid</th>
+      <td>{{ workItem.Guid }}</td>
+    </tr>
+  </table>
+</div>

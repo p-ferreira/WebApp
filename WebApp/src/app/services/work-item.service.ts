@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { WorkItemComponent } from './work-item.component';
+import { WorkItem } from '../models/workItem';
 import { Observable } from 'rxjs';
 import { Page } from '../models/page';
 

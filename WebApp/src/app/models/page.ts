@@ -1,4 +1,4 @@
-import { WorkItemComponent } from '../work-item/work-item.component';
+import { WorkItem } from './workItem';
 
 export class Page {
 
@@ -6,7 +6,7 @@ export class Page {
     PageSize : number;
     NumberOfPages : number;
     TotalNumberOfRecords : number;
-    PageItems : WorkItemComponent[];
+    PageItems : WorkItem[];
 
     constructor()
     {
